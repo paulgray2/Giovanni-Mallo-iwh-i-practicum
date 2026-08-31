@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/style.css')
+  body
+    h1= title
+    a(href='/update-cobj') Add to this table
+    table
+      thead
+        tr
+          th Name
+          th Faction
+          th Color
+      tbody
+        each item in data
+          tr
+            td= item.properties.name
+            td= item.properties.faction
+            td= item.properties.primary_color

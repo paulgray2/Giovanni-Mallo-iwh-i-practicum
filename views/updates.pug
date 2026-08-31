@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/style.css')
+  body
+    h1= title
+    a(href='/') Return to the homepage
+    form(action='/update-cobj', method='POST')
+      label(for='name') Name:
+      input(type='text', id='name', name='name')
+      br
+      label(for='faction') Faction:
+      input(type='text', id='faction', name='faction')
+      br
+      label(for='primary_color') Color:
+      input(type='text', id='primary_color', name='primary_color')
+      br
+      button(type='submit') Submit
